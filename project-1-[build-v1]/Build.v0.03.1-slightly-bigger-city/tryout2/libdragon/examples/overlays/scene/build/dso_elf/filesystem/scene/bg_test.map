@@ -1,0 +1,207 @@
+
+Discarded input sections
+
+ .group         0x00000000        0x8 build/scene/bg_test.o
+ .group         0x00000000        0xc build/scene/bg_test.o
+ .group         0x00000000        0xc build/scene/bg_test.o
+ .group         0x00000000        0xc build/scene/bg_test.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x00000000      0x7e0
+ *(.text)
+ .text          0x00000000        0x0 build/scene/bg_test.o
+ *(.text.*)
+ .text._ZN6BGTest4DrawEv
+                0x00000000       0x40 build/scene/bg_test.o
+                0x00000000                BGTest::Draw()
+ .text._ZN6BGTest10UpdateZoomEv
+                0x00000040       0xa0 build/scene/bg_test.o
+                0x00000040                BGTest::UpdateZoom()
+ .text._ZN6BGTest9UpdatePosEv
+                0x000000e0       0xc0 build/scene/bg_test.o
+                0x000000e0                BGTest::UpdatePos()
+ .text._ZN6BGTest15UpdateCenterPosEv
+                0x000001a0      0x260 build/scene/bg_test.o
+                0x000001a0                BGTest::UpdateCenterPos()
+ .text._ZN6BGTest6UpdateEv
+                0x00000400      0x120 build/scene/bg_test.o
+                0x00000400                BGTest::Update()
+ .text._ZN6BGTest16UpdateBackgroundEv
+                0x00000520       0x80 build/scene/bg_test.o
+                0x00000520                BGTest::UpdateBackground()
+ .text._ZN6BGTestC2Ev
+                0x000005a0      0x140 build/scene/bg_test.o
+                0x000005a0                BGTest::BGTest()
+                0x000005a0                BGTest::BGTest()
+ .text._ZL9new_scenev
+                0x000006e0       0x60 build/scene/bg_test.o
+ .text._ZN6BGTestD2Ev
+                0x00000740       0x40 build/scene/bg_test.o
+                0x00000740                BGTest::~BGTest()
+                0x00000740                BGTest::~BGTest()
+ .text._ZN6BGTestD0Ev
+                0x00000780       0x60 build/scene/bg_test.o
+                0x00000780                BGTest::~BGTest()
+ *(.init)
+ *(.fini)
+ *(.gnu.linkonce.t.*)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame       0x000007e0      0x1bc
+                0x000007e0                        __EH_FRAME_BEGIN__ = .
+ *(.eh_frame)
+ .eh_frame      0x000007e0      0x1b8 build/scene/bg_test.o
+                0x00000998        0x4 LONG 0x0
+
+.gcc_except_table
+                0x0000099c       0x42
+ *(.gcc_except_table*)
+ .gcc_except_table._ZN6BGTest6UpdateEv
+                0x0000099c       0x14 build/scene/bg_test.o
+ .gcc_except_table._ZN6BGTestC2Ev
+                0x000009b0       0x1e build/scene/bg_test.o
+ .gcc_except_table._ZL9new_scenev
+                0x000009ce       0x10 build/scene/bg_test.o
+
+.rodata         0x000009e0       0x7c
+ *(.rdata)
+ *(.rodata)
+ *(.rodata.*)
+ .rodata._ZN6BGTest6UpdateEv.str1.8
+                0x000009e0       0x3e build/scene/bg_test.o
+                                  0xc (size before relaxing)
+ .rodata._ZN6BGTestC2Ev.str1.8
+                0x00000a1e       0x2e build/scene/bg_test.o
+ *fill*         0x00000a1e        0x2 
+ .rodata._ZTI6BGTest
+                0x00000a20        0xc build/scene/bg_test.o
+                0x00000a20                typeinfo for BGTest
+ .rodata._ZTV6BGTest
+                0x00000a2c       0x18 build/scene/bg_test.o
+                0x00000a2c                vtable for BGTest
+ .rodata.cst4   0x00000a44       0x18 build/scene/bg_test.o
+ *(.gnu.linkonce.r.*)
+
+.MIPS.abiflags  0x00000a60       0x18
+ .MIPS.abiflags
+                0x00000a60       0x18 build/scene/bg_test.o
+
+.ctors          0x00000a78        0x4
+                0x00000a78        0x4 LONG 0x0
+ *(.ctors)
+ *(SORT_BY_NAME(.ctors.*))
+                0x00000a78                        __CTOR_LIST__ = (. - 0x4)
+
+.rel.dyn        0x00000a7c       0x10
+ .rel.dyn       0x00000a7c       0x10 build/scene/bg_test.o
+
+.dtors          0x00000a8c        0x4
+                0x00000a8c                        __DTOR_LIST__ = .
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+                0x00000a8c        0x4 LONG 0x0
+
+.data           0x00000a90        0x0
+ *(.data)
+ .data          0x00000a90        0x0 build/scene/bg_test.o
+ *(.data.*)
+ *(.gnu.linkonce.d.*)
+
+.sdata          0x00000a90       0x14
+ *(.sdata)
+ *(.sdata.*)
+ .sdata._ZTS6BGTest
+                0x00000a90        0x8 build/scene/bg_test.o
+                0x00000a90                typeinfo name for BGTest
+ .sdata.new_func
+                0x00000a98        0x4 build/scene/bg_test.o
+                0x00000a98                new_func
+ .sdata.DW.ref.__gxx_personality_v0
+                0x00000a9c        0x4 build/scene/bg_test.o
+                0x00000a9c                DW.ref.__gxx_personality_v0
+ *(.gnu.linkonce.s.*)
+                0x00000aa0                        . = ALIGN (0x4)
+                0x00000aa0                        __dso_handle = .
+                0x00000aa0        0x4 LONG 0x0
+
+.lit8
+ *(.lit8)
+
+.lit4
+ *(.lit4)
+
+.sbss
+ *(.sbss)
+ *(.sbss.*)
+ *(.gnu.linkonce.sb.*)
+ *(.scommon)
+ *(.scommon.*)
+
+.bss            0x00000aa4        0x0
+ *(.bss)
+ .bss           0x00000aa4        0x0 build/scene/bg_test.o
+ *(.bss*)
+ *(.gnu.linkonce.b.*)
+ *(COMMON)
+LOAD build/scene/bg_test.o
+OUTPUT(build/dso_elf/filesystem/scene/bg_test.elf elf32-bigmips)
+
+.reginfo        0x00000000       0x18
+ .reginfo       0x00000000       0x18 build/scene/bg_test.o
+
+.pdr            0x00000000      0x140
+ .pdr           0x00000000      0x140 build/scene/bg_test.o
+
+.mdebug.abiO64  0x00000000        0x0
+ .mdebug.abiO64
+                0x00000000        0x0 build/scene/bg_test.o
+
+.gcc_compiled_long32
+                0x00000000        0x0
+ .gcc_compiled_long32
+                0x00000000        0x0 build/scene/bg_test.o
+
+.comment        0x00000000       0x12
+ .comment       0x00000000       0x12 build/scene/bg_test.o
+                                 0x13 (size before relaxing)
+
+.gnu.attributes
+                0x00000000       0x10
+ .gnu.attributes
+                0x00000000       0x10 build/scene/bg_test.o
+
+.debug_info     0x00000000     0x85a3
+ .debug_info    0x00000000     0x85a3 build/scene/bg_test.o
+
+.debug_abbrev   0x00000000      0xb38
+ .debug_abbrev  0x00000000      0xb38 build/scene/bg_test.o
+
+.debug_loclists
+                0x00000000      0x6d2
+ .debug_loclists
+                0x00000000      0x6d2 build/scene/bg_test.o
+
+.debug_aranges  0x00000000       0x68
+ .debug_aranges
+                0x00000000       0x68 build/scene/bg_test.o
+
+.debug_rnglists
+                0x00000000       0xf6
+ .debug_rnglists
+                0x00000000       0xf6 build/scene/bg_test.o
+
+.debug_line     0x00000000      0xb6a
+ .debug_line    0x00000000      0xb6a build/scene/bg_test.o
+
+.debug_str      0x00000000     0x80e5
+ .debug_str     0x00000000     0x80e5 build/scene/bg_test.o
+                               0x850c (size before relaxing)

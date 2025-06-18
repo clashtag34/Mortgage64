@@ -1,0 +1,78 @@
+
+Discarded input sections
+
+ .MIPS.abiflags
+                0x00000000       0x18 /tmp/cccKHWse.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom_dmem         0x00000000         0x00001000
+rom_imem         0x00001000         0x00001000
+ram_data         0xa4000000         0x00001000
+ram_text         0xa4001000         0x00001000
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0xa4001000      0xab8 load address 0x00001000
+                0xa4001000                        _start = .
+ *(.text)
+ .text          0xa4001000      0xab8 /tmp/cccKHWse.o
+ *(.text.*)
+                0xa4001ab8                        _text_end = .
+
+.data           0xa4000000     0x1000 load address 0x00000000
+ *(.data)
+ .data          0xa4000000     0x1000 /tmp/cccKHWse.o
+ *(.data.*)
+                0xa4001000                        _data_end = .
+                0xa4001000                        . = ALIGN (0x8)
+
+.bss            0xa4001000        0x0 load address 0x00001000
+ *(.bss)
+ .bss           0xa4001000        0x0 /tmp/cccKHWse.o
+ *(.bss.*)
+                [!provide]                        PROVIDE (__load_start_bss = LOADADDR (.bss))
+                [!provide]                        PROVIDE (__load_stop_bss = (LOADADDR (.bss) + SIZEOF (.bss)))
+
+.bssovl1        0xa4001000        0x0 load address 0x00001000
+ *(.bssovl1)
+ *(.bssovl1.*)
+                [!provide]                        PROVIDE (__load_start_bssovl1 = LOADADDR (.bssovl1))
+                [!provide]                        PROVIDE (__load_stop_bssovl1 = (LOADADDR (.bssovl1) + SIZEOF (.bssovl1)))
+
+.bssovl2        0xa4001000        0x0 load address 0x00001000
+ *(.bssovl2)
+ *(.bssovl2.*)
+                [!provide]                        PROVIDE (__load_start_bssovl2 = LOADADDR (.bssovl2))
+                [!provide]                        PROVIDE (__load_stop_bssovl2 = (LOADADDR (.bssovl2) + SIZEOF (.bssovl2)))
+
+.bssovl3        0xa4001000        0x0 load address 0x00001000
+ *(.bssovl3)
+ *(.bssovl3.*)
+                [!provide]                        PROVIDE (__load_start_bssovl3 = LOADADDR (.bssovl3))
+                [!provide]                        PROVIDE (__load_stop_bssovl3 = (LOADADDR (.bssovl3) + SIZEOF (.bssovl3)))
+
+.meta
+ *(.meta)
+ *(.meta.*)
+
+/DISCARD/
+ *(.MIPS.abiflags)
+LOAD /tmp/cccKHWse.o
+LOAD /n64_toolchain/lib/gcc/mips64-elf/14.2.0/libgcc.a
+LOAD /n64_toolchain/lib/gcc/mips64-elf/14.2.0/libgcc.a
+OUTPUT(build/rsp/rsp_tiny3d_clipping.o elf32-bigmips)
+
+.reginfo        0x00000000       0x18
+ .reginfo       0x00000000       0x18 /tmp/cccKHWse.o
+
+.pdr            0x00000000        0x0
+ .pdr           0x00000000        0x0 /tmp/cccKHWse.o
+
+.gnu.attributes
+                0x00000000       0x10
+ .gnu.attributes
+                0x00000000       0x10 /tmp/cccKHWse.o

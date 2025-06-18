@@ -1,0 +1,104 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x00000000       0x10
+ *(.text)
+ .text          0x00000000       0x10 build/dl_test_relocs.o
+                0x00000000                dl_test_hilo_reloc
+                0x00000008                dl_test_jump_reloc
+ *(.text.*)
+ *(.init)
+ *(.fini)
+ *(.gnu.linkonce.t.*)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame       0x00000010        0x4
+                0x00000010                        __EH_FRAME_BEGIN__ = .
+ *(.eh_frame)
+                0x00000010        0x4 LONG 0x0
+
+.gcc_except_table
+ *(.gcc_except_table*)
+
+.rodata
+ *(.rdata)
+ *(.rodata)
+ *(.rodata.*)
+ *(.gnu.linkonce.r.*)
+
+.MIPS.abiflags  0x00000018       0x18
+ .MIPS.abiflags
+                0x00000018       0x18 build/dl_test_relocs.o
+
+.ctors          0x00000030        0x4
+                0x00000030        0x4 LONG 0x0
+ *(.ctors)
+ *(SORT_BY_NAME(.ctors.*))
+                0x00000030                        __CTOR_LIST__ = (. - 0x4)
+
+.rel.dyn        0x00000034        0x0
+ .rel.dyn       0x00000034        0x0 build/dl_test_relocs.o
+
+.dtors          0x00000034        0x4
+                0x00000034                        __DTOR_LIST__ = .
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+                0x00000034        0x4 LONG 0x0
+
+.data           0x00000038        0x4
+ *(.data)
+ .data          0x00000038        0x4 build/dl_test_relocs.o
+                0x00000038                dl_test_word_reloc
+ *(.data.*)
+ *(.gnu.linkonce.d.*)
+
+.sdata          0x0000003c        0x4
+ *(.sdata)
+ *(.sdata.*)
+ *(.gnu.linkonce.s.*)
+                0x0000003c                        . = ALIGN (0x4)
+                0x0000003c                        __dso_handle = .
+                0x0000003c        0x4 LONG 0x0
+
+.lit8
+ *(.lit8)
+
+.lit4
+ *(.lit4)
+
+.sbss
+ *(.sbss)
+ *(.sbss.*)
+ *(.gnu.linkonce.sb.*)
+ *(.scommon)
+ *(.scommon.*)
+
+.bss            0x00000040        0x0
+ *(.bss)
+ .bss           0x00000040        0x0 build/dl_test_relocs.o
+ *(.bss*)
+ *(.gnu.linkonce.b.*)
+ *(COMMON)
+LOAD build/dl_test_relocs.o
+OUTPUT(build/dso_elf/filesystem/dl_test_relocs.elf elf32-bigmips)
+
+.reginfo        0x00000000       0x18
+ .reginfo       0x00000000       0x18 build/dl_test_relocs.o
+
+.pdr            0x00000000        0x0
+ .pdr           0x00000000        0x0 build/dl_test_relocs.o
+
+.gnu.attributes
+                0x00000000       0x10
+ .gnu.attributes
+                0x00000000       0x10 build/dl_test_relocs.o

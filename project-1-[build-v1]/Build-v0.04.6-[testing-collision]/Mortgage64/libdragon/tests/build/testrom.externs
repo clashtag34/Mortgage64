@@ -1,0 +1,3 @@
+EXTERN(dfs_open) /* dl_test_imports.dso */
+EXTERN(dl_test_sym) /* dl_test_imports.dso */
+EXTERN(dlopen) /* dl_test_imports.dso */

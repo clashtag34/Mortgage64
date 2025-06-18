@@ -1,0 +1,40 @@
+EXTERN(_Unwind_Resume) /* bg_test.dso, sprite_test.dso */
+EXTERN(_ZN10Background4DrawEv) /* bg_test.dso, sprite_test.dso */
+EXTERN(_ZN10Background6SetPosEff) /* bg_test.dso */
+EXTERN(_ZN10Background8SetImageEPKc) /* bg_test.dso, sprite_test.dso */
+EXTERN(_ZN10Background8SetScaleEff) /* bg_test.dso */
+EXTERN(_ZN10BackgroundC1Ev) /* bg_test.dso, sprite_test.dso */
+EXTERN(_ZN10BackgroundD1Ev) /* bg_test.dso, sprite_test.dso */
+EXTERN(_ZN6Sprite4DrawEv) /* bg_test.dso, sprite_test.dso */
+EXTERN(_ZN6Sprite6SetPosEff) /* bg_test.dso */
+EXTERN(_ZN6Sprite8SetImageEP8sprite_s) /* sprite_test.dso */
+EXTERN(_ZN6Sprite8SetImageEPKc) /* bg_test.dso */
+EXTERN(_ZN6SpriteC1Ev) /* bg_test.dso, sprite_test.dso */
+EXTERN(_ZN6SpriteD1Ev) /* bg_test.dso, sprite_test.dso */
+EXTERN(_ZN8SceneMgr12SetNextSceneENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE) /* bg_test.dso, sprite_test.dso */
+EXTERN(_ZN9SceneBaseC2Ev) /* bg_test.dso, sprite_test.dso */
+EXTERN(_ZN9SceneBaseD2Ev) /* bg_test.dso, sprite_test.dso */
+EXTERN(_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv) /* bg_test.dso, sprite_test.dso */
+EXTERN(_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_createERjj) /* sprite_test.dso */
+EXTERN(_ZSt19__throw_logic_errorPKc) /* sprite_test.dso */
+EXTERN(_ZTI9SceneBase) /* bg_test.dso, sprite_test.dso */
+EXTERN(_ZTVN10__cxxabiv117__class_type_infoE) /* scene_common.dso */
+EXTERN(_ZTVN10__cxxabiv120__si_class_type_infoE) /* bg_test.dso, sprite_test.dso */
+EXTERN(_ZdlPvj) /* scene_common.dso, bg_test.dso, sprite_test.dso */
+EXTERN(_Znwj) /* bg_test.dso, sprite_test.dso */
+EXTERN(__cxa_atexit) /* sprite_test.dso */
+EXTERN(__gxx_personality_v0) /* scene_common.dso, bg_test.dso, sprite_test.dso */
+EXTERN(__rdpq_fixup_mode) /* bg_test.dso, sprite_test.dso */
+EXTERN(display_get_height) /* scene_common.dso, bg_test.dso, sprite_test.dso */
+EXTERN(display_get_width) /* scene_common.dso, bg_test.dso, sprite_test.dso */
+EXTERN(fmodf) /* scene_common.dso */
+EXTERN(joypad_get_buttons_held) /* bg_test.dso */
+EXTERN(joypad_get_buttons_pressed) /* bg_test.dso, sprite_test.dso */
+EXTERN(joypad_get_inputs) /* bg_test.dso */
+EXTERN(memcpy) /* sprite_test.dso */
+EXTERN(rand) /* sprite_test.dso */
+EXTERN(rdpq_tex_blit) /* scene_common.dso */
+EXTERN(sprite_free) /* scene_common.dso, sprite_test.dso */
+EXTERN(sprite_get_pixels) /* scene_common.dso */
+EXTERN(sprite_load) /* scene_common.dso, sprite_test.dso */
+EXTERN(strlen) /* sprite_test.dso */

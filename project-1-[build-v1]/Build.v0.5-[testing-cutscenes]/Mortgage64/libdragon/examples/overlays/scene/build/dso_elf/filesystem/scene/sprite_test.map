@@ -1,0 +1,220 @@
+
+Discarded input sections
+
+ .group         0x00000000        0xc build/scene/sprite_test.o
+ .group         0x00000000        0x8 build/scene/sprite_test.o
+ .group         0x00000000        0xc build/scene/sprite_test.o
+ .group         0x00000000        0xc build/scene/sprite_test.o
+ .group         0x00000000        0xc build/scene/sprite_test.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x00000000      0xa40
+ *(.text)
+ .text          0x00000000        0x0 build/scene/sprite_test.o
+ *(.text.*)
+ .text._ZN10SpriteTest4DrawEv
+                0x00000000       0x80 build/scene/sprite_test.o
+                0x00000000                SpriteTest::Draw()
+ .text.__tcf_0  0x00000080       0x60 build/scene/sprite_test.o
+ .text._ZN10SpriteTest11SpawnSpriteEv
+                0x000000e0      0x200 build/scene/sprite_test.o
+                0x000000e0                SpriteTest::SpawnSprite()
+ .text._ZN10SpriteTest13UpdateSpritesEv
+                0x000002e0      0x180 build/scene/sprite_test.o
+                0x000002e0                SpriteTest::UpdateSprites()
+ .text._ZN10SpriteTest6UpdateEv
+                0x00000460      0x140 build/scene/sprite_test.o
+                0x00000460                SpriteTest::Update()
+ .text._ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_
+                0x000005a0      0x120 build/scene/sprite_test.o
+                0x000005a0                std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+                0x000005a0                std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+ .text.startup._GLOBAL__sub_I__ZN10SpriteTestC2Ev
+                0x000006c0       0xe0 build/scene/sprite_test.o
+ .text._ZN10SpriteTestC2Ev
+                0x000007a0      0x180 build/scene/sprite_test.o
+                0x000007a0                SpriteTest::SpriteTest()
+                0x000007a0                SpriteTest::SpriteTest()
+ .text._ZL9new_scenev
+                0x00000920       0x60 build/scene/sprite_test.o
+ .text._ZN10SpriteTestD2Ev
+                0x00000980       0x80 build/scene/sprite_test.o
+                0x00000980                SpriteTest::~SpriteTest()
+                0x00000980                SpriteTest::~SpriteTest()
+ .text._ZN10SpriteTestD0Ev
+                0x00000a00       0x40 build/scene/sprite_test.o
+                0x00000a00                SpriteTest::~SpriteTest()
+ *(.init)
+ *(.fini)
+ *(.gnu.linkonce.t.*)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame       0x00000a40      0x230
+                0x00000a40                        __EH_FRAME_BEGIN__ = .
+ *(.eh_frame)
+ .eh_frame      0x00000a40      0x22c build/scene/sprite_test.o
+                                0x240 (size before relaxing)
+                0x00000c6c        0x4 LONG 0x0
+
+.gcc_except_table
+                0x00000c70       0x5e
+ *(.gcc_except_table*)
+ .gcc_except_table._ZN10SpriteTest6UpdateEv
+                0x00000c70       0x14 build/scene/sprite_test.o
+ .gcc_except_table._GLOBAL__sub_I__ZN10SpriteTestC2Ev
+                0x00000c84       0x18 build/scene/sprite_test.o
+ .gcc_except_table._ZN10SpriteTestC2Ev
+                0x00000c9c       0x1e build/scene/sprite_test.o
+ .gcc_except_table._ZL9new_scenev
+                0x00000cba       0x10 build/scene/sprite_test.o
+ .gcc_except_table._ZN10SpriteTestD2Ev
+                0x00000cca        0x4 build/scene/sprite_test.o
+
+.rodata         0x00000cd0       0xec
+ *(.rdata)
+ *(.rodata)
+ *(.rodata.*)
+ .rodata._ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_.str1.8
+                0x00000cd0       0xa5 build/scene/sprite_test.o
+                                 0x32 (size before relaxing)
+ .rodata._GLOBAL__sub_I__ZN10SpriteTestC2Ev.str1.8
+                0x00000d75       0x52 build/scene/sprite_test.o
+ .rodata._ZN10SpriteTestC2Ev.str1.8
+                0x00000d75       0x15 build/scene/sprite_test.o
+ *fill*         0x00000d75        0x3 
+ .rodata._ZTS10SpriteTest
+                0x00000d78        0xd build/scene/sprite_test.o
+                0x00000d78                typeinfo name for SpriteTest
+ *fill*         0x00000d85        0x3 
+ .rodata._ZTI10SpriteTest
+                0x00000d88        0xc build/scene/sprite_test.o
+                0x00000d88                typeinfo for SpriteTest
+ .rodata._ZTV10SpriteTest
+                0x00000d94       0x18 build/scene/sprite_test.o
+                0x00000d94                vtable for SpriteTest
+ .rodata.cst4   0x00000dac       0x10 build/scene/sprite_test.o
+ *(.gnu.linkonce.r.*)
+
+.MIPS.abiflags  0x00000dc0       0x18
+ .MIPS.abiflags
+                0x00000dc0       0x18 build/scene/sprite_test.o
+
+.rel.dyn        0x00000dd8       0x10
+ .rel.dyn       0x00000dd8       0x10 build/scene/sprite_test.o
+
+.ctors          0x00000de8        0x8
+                0x00000de8        0x4 LONG 0x0
+ *(.ctors)
+ .ctors         0x00000dec        0x4 build/scene/sprite_test.o
+ *(SORT_BY_NAME(.ctors.*))
+                0x00000dec                        __CTOR_LIST__ = (. - 0x4)
+
+.dtors          0x00000df0        0x4
+                0x00000df0                        __DTOR_LIST__ = .
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+                0x00000df0        0x4 LONG 0x0
+
+.data           0x00000df4        0x0
+ *(.data)
+ .data          0x00000df4        0x0 build/scene/sprite_test.o
+ *(.data.*)
+ *(.gnu.linkonce.d.*)
+
+.sdata          0x00000df4        0xc
+ *(.sdata)
+ *(.sdata.*)
+ .sdata.new_func
+                0x00000df4        0x4 build/scene/sprite_test.o
+                0x00000df4                new_func
+ .sdata.DW.ref.__gxx_personality_v0
+                0x00000df8        0x4 build/scene/sprite_test.o
+                0x00000df8                DW.ref.__gxx_personality_v0
+ *(.gnu.linkonce.s.*)
+                0x00000dfc                        . = ALIGN (0x4)
+                0x00000dfc                        __dso_handle = .
+                0x00000dfc        0x4 LONG 0x0
+
+.lit8
+ *(.lit8)
+
+.lit4
+ *(.lit4)
+
+.sbss
+ *(.sbss)
+ *(.sbss.*)
+ *(.gnu.linkonce.sb.*)
+ *(.scommon)
+ *(.scommon.*)
+
+.bss            0x00000e00       0x48
+ *(.bss)
+ .bss           0x00000e00        0x0 build/scene/sprite_test.o
+ *(.bss*)
+ .bss._ZL16sprite_filenames
+                0x00000e00       0x48 build/scene/sprite_test.o
+ *(.gnu.linkonce.b.*)
+ *(COMMON)
+LOAD build/scene/sprite_test.o
+OUTPUT(build/dso_elf/filesystem/scene/sprite_test.elf elf32-bigmips)
+
+.reginfo        0x00000000       0x18
+ .reginfo       0x00000000       0x18 build/scene/sprite_test.o
+
+.pdr            0x00000000      0x160
+ .pdr           0x00000000      0x160 build/scene/sprite_test.o
+
+.mdebug.abiO64  0x00000000        0x0
+ .mdebug.abiO64
+                0x00000000        0x0 build/scene/sprite_test.o
+
+.gcc_compiled_long32
+                0x00000000        0x0
+ .gcc_compiled_long32
+                0x00000000        0x0 build/scene/sprite_test.o
+
+.comment        0x00000000       0x12
+ .comment       0x00000000       0x12 build/scene/sprite_test.o
+                                 0x13 (size before relaxing)
+
+.gnu.attributes
+                0x00000000       0x10
+ .gnu.attributes
+                0x00000000       0x10 build/scene/sprite_test.o
+
+.debug_info     0x00000000     0x8d36
+ .debug_info    0x00000000     0x8d36 build/scene/sprite_test.o
+
+.debug_abbrev   0x00000000      0xc26
+ .debug_abbrev  0x00000000      0xc26 build/scene/sprite_test.o
+
+.debug_loclists
+                0x00000000      0xbf9
+ .debug_loclists
+                0x00000000      0xbf9 build/scene/sprite_test.o
+
+.debug_aranges  0x00000000       0x70
+ .debug_aranges
+                0x00000000       0x70 build/scene/sprite_test.o
+
+.debug_rnglists
+                0x00000000      0x239
+ .debug_rnglists
+                0x00000000      0x239 build/scene/sprite_test.o
+
+.debug_line     0x00000000      0xf6d
+ .debug_line    0x00000000      0xf6d build/scene/sprite_test.o
+
+.debug_str      0x00000000     0x80f0
+ .debug_str     0x00000000     0x80f0 build/scene/sprite_test.o
+                               0x8522 (size before relaxing)

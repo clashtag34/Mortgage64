@@ -1,0 +1,102 @@
+
+Discarded input sections
+
+ .MIPS.abiflags
+                0x00000000       0x18 /tmp/ccU7Ym5I.o
+ .data.rdpq_send
+                0x00000000        0x4 /tmp/ccU7Ym5I.o
+ .bss.rdpq_send
+                0x00000000       0xb0 /tmp/ccU7Ym5I.o
+ .text.rdpq_send_helpers
+                0x00000000       0x4c /tmp/ccU7Ym5I.o
+ .data.rdpq_mode_api
+                0x00000000       0x58 /tmp/ccU7Ym5I.o
+ .bss.rdpq_mode_api
+                0x00000000       0x10 /tmp/ccU7Ym5I.o
+ .text.rdpq_mode_api
+                0x00000000      0x248 /tmp/ccU7Ym5I.o
+ .text.rdpq_scissor
+                0x00000000       0x20 /tmp/ccU7Ym5I.o
+ .text.rdpq_fillcolor
+                0x00000000       0x4c /tmp/ccU7Ym5I.o
+ .text.rdpq_triangle_send_async
+                0x00000000      0x47c /tmp/ccU7Ym5I.o
+ .data.rdpq_triangle
+                0x00000000       0x10 /tmp/ccU7Ym5I.o
+ .text.rdpq_triangle
+                0x00000000      0x38c /tmp/ccU7Ym5I.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom_dmem         0x00000000         0x00001000
+rom_imem         0x00001000         0x00001000
+ram_data         0xa4000000         0x00001000
+ram_text         0xa4001000         0x00001000
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0xa4001000      0x47c load address 0x00001000
+                0xa4001000                        _start = .
+ *(.text)
+ .text          0xa4001000      0x3f8 /tmp/ccU7Ym5I.o
+ *(.text.*)
+ .text.rdpq_send
+                0xa40013f8       0x84 /tmp/ccU7Ym5I.o
+                0xa400147c                        _text_end = .
+
+.data           0xa4000000      0xd01 load address 0x00000000
+ *(.data)
+ .data          0xa4000000      0xd01 /tmp/ccU7Ym5I.o
+ *(.data.*)
+                0xa4000d01                        _data_end = .
+                0xa4000d08                        . = ALIGN (0x8)
+
+.bss            0xa4000d01        0x0 load address 0x00000d01
+ *(.bss)
+ .bss           0xa4000d01        0x0 /tmp/ccU7Ym5I.o
+ *(.bss.*)
+                [!provide]                        PROVIDE (__load_start_bss = LOADADDR (.bss))
+                [!provide]                        PROVIDE (__load_stop_bss = (LOADADDR (.bss) + SIZEOF (.bss)))
+
+.bssovl1        0xa4000d01        0x0 load address 0x00000d01
+ *(.bssovl1)
+ *(.bssovl1.*)
+                [!provide]                        PROVIDE (__load_start_bssovl1 = LOADADDR (.bssovl1))
+                [!provide]                        PROVIDE (__load_stop_bssovl1 = (LOADADDR (.bssovl1) + SIZEOF (.bssovl1)))
+
+.bssovl2        0xa4000d01        0x0 load address 0x00000d01
+ *(.bssovl2)
+ *(.bssovl2.*)
+                [!provide]                        PROVIDE (__load_start_bssovl2 = LOADADDR (.bssovl2))
+                [!provide]                        PROVIDE (__load_stop_bssovl2 = (LOADADDR (.bssovl2) + SIZEOF (.bssovl2)))
+
+.bssovl3        0xa4000d01        0x0 load address 0x00000d01
+ *(.bssovl3)
+ *(.bssovl3.*)
+                [!provide]                        PROVIDE (__load_start_bssovl3 = LOADADDR (.bssovl3))
+                [!provide]                        PROVIDE (__load_stop_bssovl3 = (LOADADDR (.bssovl3) + SIZEOF (.bssovl3)))
+
+.meta
+ *(.meta)
+ *(.meta.*)
+
+/DISCARD/
+ *(.MIPS.abiflags)
+LOAD /tmp/ccU7Ym5I.o
+LOAD /n64_toolchain/lib/gcc/mips64-elf/14.2.0/libgcc.a
+LOAD /n64_toolchain/lib/gcc/mips64-elf/14.2.0/libgcc.a
+OUTPUT(build/rsp_test.o elf32-bigmips)
+
+.reginfo        0x00000000       0x18
+ .reginfo       0x00000000       0x18 /tmp/ccU7Ym5I.o
+
+.pdr            0x00000000        0x0
+ .pdr           0x00000000        0x0 /tmp/ccU7Ym5I.o
+
+.gnu.attributes
+                0x00000000       0x10
+ .gnu.attributes
+                0x00000000       0x10 /tmp/ccU7Ym5I.o
